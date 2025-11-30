@@ -1,13 +1,12 @@
 {
   "expo": {
-    "name": "RN_Tutorial",
-    "slug": "RN_Tutorial",
+    "name": "KudiFlow",
+    "slug": "KudiFlow",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "rntutorial",
     "userInterfaceStyle": "automatic",
-    "newArchEnabled": true,
     "ios": {
       "supportsTablet": true
     },
@@ -19,7 +18,9 @@
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.godswill_udida.kudiflow",
+      "jsEngine": "hermes"
     },
     "web": {
       "output": "static",
@@ -27,6 +28,12 @@
       "bundler": "metro"
     },
     "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app accesses your photos to let you share them with your friends."
+        }
+      ],
       "expo-router",
       [
         "expo-splash-screen",
@@ -41,9 +48,12 @@
         }
       ]
     ],
-    "experiments": {
-      "typedRoutes": true,
-      "reactCompiler": true
-    }
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "54e6c484-f26c-4609-9f5e-50ceb2a15ef9"
+      }
+    },
+    "owner": "godswill_udida"
   }
 }
